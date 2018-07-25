@@ -1,2 +1,49 @@
-<h1>{{title}}</h1>
-<p>Your username is {{user.username}}</p>
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Kodinger">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>All Products &mdash; Bootstrap 4 Login Page Snippet</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/my-login.css">
+</head>
+<body class="my-login-page">
+	<section class="h-100">
+		<div class="container h-100">
+			<div class="row justify-content-md-center h-100">
+				<div class="card-wrapper">
+					<div class="brand">
+						<img src="images/logo.jpg">
+					</div>
+					<div class="card fat">
+						<div class="card-body">
+              <table>
+                <tr>
+                  <th></th>
+                  <th>Title</th>
+                  <th>Description</th>
+                </tr>
+                {{#each product}}
+                <tr>
+                  <td>
+                    <img height="64" src="{{imageUri}}" alt="{{title}}">
+                  </td>
+                  <td>{{title}}</td>
+                  <td>{{description}}</td>
+                </tr>
+                {{/each}}
+              </table>
+
+						</div>
+					</div>
+					<div class="footer">
+						Copyright &copy; 2018 &mdash; Sean Derman Yang
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="javascripts/jquery.min.js"></script>
+	<script src="javascripts/bootstrap.min.js"></script>
+	<script src="javascripts/my-login.js"></script>
+</body>
